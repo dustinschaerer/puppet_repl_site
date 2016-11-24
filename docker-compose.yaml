@@ -1,0 +1,7 @@
+web:
+  image: ruby:2.2
+db:
+  image: postgres:9.5
+redis:
+  image: redis:latest
+
