@@ -1,0 +1,354 @@
+<!-- Loader -->
+<div class="loader">
+  <div class="loader-img"></div>
+</div>
+
+<!-- Top content -->
+<div class="top-content">
+
+  <!-- Top menu -->
+  <nav class="navbar navbar-inverse navbar-no-bg" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#top-navbar-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Puppet Debugger</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="top-navbar-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="" href="/index.html#how-it-works">How it works</a></li>
+          <li><a class="" href="/index.html/index.html#pricing">Pricing</a></li>
+          <li><a class="" href="/index.html#c-form-2">Contact Us</a></li>
+          <li><a class="btn btn-link-2" href="/documentation">Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="inner-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text wow fadeInUp">
+          <h1><strong>Documentation</strong></h1>
+          <div class="description">
+            <p>Use the embedded terminal window to test running commands in the Puppet Debugger.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 images-slider wow fadeInUp">
+          <div id="slider-1" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#slider-1" data-slide-to="0" class="active"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+              <div class="item active">
+                <iframe src="https://www.puppet-debugger.com" width="760" height="460"></iframe>
+              </div>
+              <!-- <div class="item active">
+                <img src="assets/img/devices/browser.jpg" alt="">
+              </div> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Documentation -->
+<div class="always-beautiful-container section-container">
+  <div class="container">
+      <div class="row">
+        <div class="col-sm-12 always-beautiful section-description wow fadeIn">
+          <h2>Documentation</h2>
+          <div class="divider-1 wow fadeInUp"><span></span></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 scrollspy">
+        <ul id="nav" class="nav hidden-xs hidden-sm" data-spy="affix" data-offset-top="970" data-offset-bottom="166">
+          <li><a href="#compatibility">Compatibility</a></li>
+          <li><a href="#production-usage">Production usage</a>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#load-path">Load path</a></li>
+          <li><a href="#interactive-demo">Interactive demo</a></li>
+          <li><a href="#web-demo">Web demo</a></li>
+          <li><a href="#usage">Usage</a></li>
+          <li><a href="#using-variables">Using Variables</a></li>
+          <li><a href="#listing-variables">Listing variables</a></li>
+          <li><a href="#listing-functions">Listing functions</a></li>
+          <li><a href="#using-functions">Using functions</a></li>
+          <li><a href="#duplicate-resource-error">Duplicate resource error</a></li>
+          <li><a href="#log-level">Setting the puppet log level</a></li>
+          <li><a href="#remote-nodes">Remote nodes</a></li>
+          <!-- maybe have inset categories here -->
+          <li><a href="#auto-complete">Auto Complete</a></li>
+          <li><a href="#fact-sets">FacterDB and using different fact sets</a></li>
+          <li><a href="#playback-support">Playback support</a></li>
+          <li><a href="#web-based">Web Based Playback support</a></li>
+          <li><a href="#troubleshooting">Troubleshooting</a></li>
+          <li><a href="#copyright">Copyright</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-9">
+        <section id="compatibility">
+          <h2><span class="fa fa-edit"></span>Compatability</h2>
+          <p>Requires Puppet 3.8+ and only uses the future parser.</p>
+        </section>
+
+        <section id="production-usage">
+          <h2><span class="fa fa-edit"></span>Production</h2>
+          <p>The puppet repl is a developer tool that should only be used when writing puppet code. Although it might seem useful to install on your production puppet master. Please do not install because of the puppet-debugger gem dependencies that might conflict with your existing environment.</p>
+        </section>
+
+        <section id="installation">
+          <h2><span class="fa fa-edit">Installation</span></h2>
+          <p><code>gem install puppet-debugger</code></p>
+        </section>
+
+        <section id="load-path">
+          <h2><span class="fa fa-edit">Load path</span></h2>
+          <p>puppet-debugger will load all functions from your basemodulepath and environment path.</p>
+          <p>This means if you run <code>puppet module install puppetlabs-stdlib</code> and they will be available in the repl.</p>
+        </section>
+
+        <section id="interactive-demo">
+          <h2><span class="fa fa-edit">Interactive demo</span></h2>
+          <p>I have put together a repo with a few setup instructions that will assist you in setting up a "mock" environment for usage with the puppet-debugger. This was originally intended when giving a demo of the repl, but also seems useful for other people.</p>
+          <p><a href="https://github.com/nwops/puppet-debugger-demo">https://github.com/nwops/puppet-debugger-demo</a></p>
+        </section>
+
+        <section id="web-demo">
+          <h2><span class="fa fa-edit"></span> Web demo</h2>
+          <p>There is a web version of the puppet-debugger online but is somewhat limited at this time. In the future we will be adding lots of awesome features to the web repl.</p>
+        </section>
+
+        <section id="usagfe">
+          <h2><span class="fa fa-edit">Usage</span> </h2>
+          <p>puppet-debugger will only parse and evaluate your code. It will not build a catalog and try to enforce the catalog. This has a few side affects.</p>
+          <ul>
+            <li>Type and provider code will not get run.</li>
+            <li>Nothing is created or destroyed on your system.</li>
+          </ul>
+          <p><code>pdb</code></p>
+          <p>Example Usage</p>
+          <p><pre><code>MacBook-Pro-2/tmp % pdb
+Ruby Version: 2.0.0
+Puppet Version: 3.8.5
+Puppet Debugger Version: 0.0.7
+Created by: NWOps <corey@nwops.io>
+Type "exit", "functions", "vars", "krt", "facts", "reset", "help" for more information.
+
+>> ['/tmp/test3', '/tmp/test4'].each |String $path| { file{$path: ensure => present} }
+  => [
+     [0] "/tmp/test3",
+     [1] "/tmp/test4"
+ ]
+ >></code></pre></p>
+            <p>You can also use the debugger from the puppet command via <code>puppet debugger</code></p>
+                    </section>
+
+        <section id="using-variables">
+          <h2><span class="fa fa-edit">Using Variables</span> </h2>
+          <p><pre><code>MacBook-Pro-2/tmp % pdb
+Ruby Version: 2.0.0
+Puppet Version: 3.8.5
+Puppet Debugger Version: 0.0.7
+Created by: NWOps &lt;corey@nwops.io&gt;
+Type "exit", "functions", "vars", "krt", "facts", "reset", "help" for more information.
+
+&gt;&gt;
+
+&gt;&gt; $config_file = '/etc/httpd/httpd.conf'
+ =&gt; "/etc/httpd/httpd.conf"
+ &gt;&gt; file{$config_file: ensure =&gt; present, content =&gt; 'hello'}
+  =&gt; Puppet::Type::File {
+                        path =&gt; "/etc/httpd/httpd.conf",
+                    provider =&gt; posix,
+                      ensure =&gt; present,
+                     content =&gt; "{md5}5d41402abc4b2a76b9719d911017c592",
+                    checksum =&gt; nil,
+                      backup =&gt; "puppet",
+                     replace =&gt; true,
+                       links =&gt; manage,
+                       purge =&gt; false,
+                sourceselect =&gt; first,
+                   show_diff =&gt; true,
+        validate_replacement =&gt; "%",
+          source_permissions =&gt; use,
+     selinux_ignore_defaults =&gt; false,
+                    loglevel =&gt; notice,
+                        name =&gt; "/etc/httpd/httpd.conf",
+                       title =&gt; "/etc/httpd/httpd.conf"
+ }
+ &gt;&gt;</code></pre></p>
+        </section>
+
+        <section id="listing-varaibles">
+          <h2><span class="fa fa-edit">Listing variables</span> </h2>
+          <p>To see the current variables in the scope use the <code>vars</code> keyword.</p>
+          <p><a href="https://github.com/nwops/puppet-debugger/blob/master/resources/variables.png" target="_blank"><img src="https://github.com/nwops/puppet-debugger/raw/master/resources/variables.png" alt="variables" style="max-width:100%; border: solid 1px #ccc;border-radius: 5px;"></a></p>
+        </section>
+
+        <section id="listing-functions">
+          <h2><span class="fa fa-edit">Listing functions</span> </h2>
+          <p>Knowing what functions are available and where they come from is extremely helpful especially in a debugger session.  Run the <code>functions</code> keyword to get a name spaced list of functions.  You can further filter out functions by passing in a filter argument. <code>functions stdlib</code></p>
+          <p><a href="https://github.com/nwops/puppet-debugger/blob/master/resources/functions.png" target="_blank"><img src="https://github.com/nwops/puppet-debugger/raw/master/resources/functions.png" alt="functions" style="max-width:100%;border: solid 1px #ccc;border-radius: 5px;"></a></p>
+        </section>
+
+        <section id="using-functions">
+          <h2><span class="fa fa-edit">Using functions</span> </h2>
+          <p>Functions will run and produce the desired output.  If you type the word <code>functions</code> a list of available functions will be displayed on the screen along with a namespace to help you identify where they came from.</p>
+          <pre><code>&gt;&gt; split('hello/there/one/two/three','/')
+ =&gt; ["hello", "there", "one", "two", "three"]
+</code></pre>
+          <p>So you can imagine how much fun this can be trying out different types of functions.</p>troubleshooting
+        </section>
+
+        <section id="duplicate-resource-error">
+          <h2><span class="fa fa-edit">Duplicate resource error</span> </h2>
+          <p>Just like normal puppet code you cannot create duplicate resources.</p>
+          <pre><code>&gt;&gt; file{'/tmp/failure2.txt': ensure =&gt; present}
+ =&gt; Evaluation Error: Error while evaluating a Resource Statement, Duplicate declaration: File[/tmp/failure2.txt] is already declared in file :1; cannot redeclare at line 1 at line 1:1</code></pre>
+        <p>You can reset the parser by running <code>reset</code> within the debugger without having to exit.</p>
+        </section>
+
+        <section id="log-level">
+          <h2><span class="fa fa-edit">Setting the puppet log level</span> </h2>
+          <p>If you want to see what puppet is doing behind the scenes you can set the log level via <code>:set loglevel debug</code>.  Valid log levels are <code>debug</code>, <code>info</code>, <code>warning</code> and other levels defined in puppet <a href="https://docs.puppetlabs.com/puppet/4.4/reference/configuration.html#loglevel">config reference</a> .</p>
+         <p><a href="https://github.com/nwops/puppet-debugger/blob/master/resources/hiera.png" target="_blank"><img src="https://github.com/nwops/puppet-debugger/raw/master/resources/hiera.png" alt="hiera" style="max-width:100%;"></a></p>
+        </section>
+
+        <section id="remote-nodes">
+          <h2><span class="fa fa-edit">Remote nodes</span> </h2>
+          <p>This is new for 0.2.0.  The puppet-debugger now has the ability to pull in remote node information. Instead of mocking facts you can pull in real information!  Get real facts and real node classification from the puppet master and then play with the info in the debugger session. This is made possible by using the puppet node indirector interface.</p>
+          <p>ie.  <code>puppet node find hostname --terminus rest --render-as yaml</code></p>
+          <p>In order to use this feature you will need to setup a few things.</p>
+        </section>
+
+        <section id="setup">
+          <h2><span class="fa fa-edit">Setup</span> </h2>
+          <ol>
+            <li><p>Allow node rest calls to your workstation on the puppet master(s)
+            See <a href="https://github.com/nwops/puppet-debugger/issues/17">https://github.com/nwops/puppet-debugger/issues/17</a> for more info on allowing this rule.  </p></li>
+            <li><p>Ensure you have the same code that your puppet master does.  Since this pulls in classification you will need to have all the puppet modules defined in your
+            environmentpath or basemodulepath.   The simple thing to do is to point your basemodulepath to your fixtures directory if using rspec-puppet or some other high level modules directory.   For PE users you will want to ensure you have all the
+            pe specific modules in your development environment.  Not doing this step will result in class not found errors.</p></li>
+            <li><p>Set the server config in your local puppet.conf. (on your development machine)</p>
+
+            <p>a. Find your puppet config file <code>puppet config print config</code></p>
+
+            <p>b. edit the config file with an editor</p>
+
+            <p>c. add <code>server = &lt;hostname&gt;</code> to your main block</p></li>
+            <li><p>If using hiera you also need to set the path to your hiera config file since
+            the puppet-debugger will be compiling puppet code which could in turn call hiera
+            functions.  Additionally, make sure your hiera config points to the correct
+            data location.</p>
+
+            <pre><code style="overflow: visible;">[main]
+  server = pe-puppet.localdomain
+  basemodulepath = /Users/cosman/github/puppet-debugger-demo/modules:/Users/cosman/Downloads/pe_modules
+  hiera_config = /Users/cosman/github/puppet-debugger-demo/hieradata/hiera.yaml
+            </code></pre></li>
+          </ol>
+        </section>
+
+        <section id="rn-usage">
+          <h2><span class="fa fa-edit">Usage</span> </h2>
+          <p>There are two ways of using the remote node feature.  You can either pass in the node name from the command line or set the node name from the debugger session.</p>
+          <h4>Command line:</h4>
+          <p><code>pdb -n node_name</code></p>
+          <p><a href="https://github.com/nwops/puppet-debugger/blob/master/resources/command_line_node.png" target="_blank"><img src="https://github.com/nwops/puppet-debugger/raw/master/resources/command_line_node.png" alt="command line" style="max-width:100%;"></a></p>
+          <h4>From debugger session:</h4>
+          <p><code>:set node node_name</code></p>
+          <p><a href="https://github.com/nwops/puppet-debugger/blob/master/resources/set_node.png" target="_blank"><img src="https://github.com/nwops/puppet-debugger/raw/master/resources/set_node.png" alt="command line" style="max-width:100%;"></a></p>
+        </section>
+
+        <section id="autocomplete">
+          <h2><span class="fa fa-edit">Auto Complete</span> </h2>
+          <p>The puppet-debugger uses readline internally. So any variable or function is also available for auto completion. Press the tab key to engage the auto complete functionality.</p>
+          <p>Currently native functions are not available in auto complete. See #24</p>
+        </section>
+
+        <section id="fact-sets">
+          <h2><span class="fa fa-edit">FacterDB and using different fact sets</span> </h2>
+          <p>The puppet-debugger internally leverages the <a href="https://github.com/camptocamp/facterdb/">facterdb</a> gem to load pre-cached facts into the debugger session.  At some point you
+          may need to override the debugger's default fact set with something of your own choosing.  You can do this by setting one of the environment variables below.</p>
+          <ul>
+          <li><code>REPL_FACTERDB_FILTER</code>  Sets the entire filter</li>
+          <li><code>REPL_FACTER_OS_VERSION</code> Sets the OS version (only works with RHEL clones and Fedora)</li>
+          <li><code>REPL_FACTER_OS_NAME</code> Sets the OS name (only works with RHEL clones and Fedora)</li>
+          <li><code>REPL_FACTER_VERSION</code> Sets the facter version to use in the debugger session (uses facter 3.1 for puppet 4.4+ and facter 2.4 for 3.8-4.4)</li>
+          </ul>
+          <p>By default it looks something like <code>operatingsystem=Fedora and operatingsystemrelease=23 and architecture=x86_64 and facterversion=/^3\\.1/</code>
+          depending on the puppet version currently running.</p>
+          <p>You can display the current facterdb filter by running <code>facterdb_filter</code> from the debugger session.</p>
+          <p>Why do facter versions matter? While facter and puppet work independently just fine, newer forge modules utilize certain data structures found only in newer versions of facter. So its really up to the puppet code you use. With facter 3, almost every fact is now a data structure.  So if you are having issues with facts not existing in the debugger you may need to change the facter version <code>REPL_FACTER_VERSION</code> to something different.</p>
+        </section>
+
+        <section id="playback-support">
+          <h2><span class="fa fa-edit">Playback support</span> </h2>
+          <p>puppet-debugger now supports playing back files or urls and loading the content into the debugger session.  This means if you want to start a debugger session from an existing file or url you can play the content back in the debugger. You can also playback a file that contains puppet code and debugger commands.</p>
+          <p><code>play https://gist.githubusercontent.com/logicminds/f9b1ac65a3a440d562b0/raw</code></p>
+          <p>or</p>
+          <p><code>pdb -p https://gist.githubusercontent.com/logicminds/f9b1ac65a3a440d562b0/raw</code></p>
+          <p>or just use STDIN  <code>pdb &lt;some_file&gt;</code> or <code>echo "abs(-3)" | pdb</code></p>
+        </section>
+
+        <section id="web-based">
+          <h2><span class="fa fa-edit">Web based playback support</span> </h2>
+          <p>If using the <a href="https://www.puppet-debugger.com">web based debugger</a> you can playback a shared url which would start a debugger session and then load the content from the url or parameter.</p>
+          <p>Example:
+          <a href="https://puppet-debugger.com/play?url=https://gist.github.com/logicminds/64f0fe9f64339f18f097a9f42acd6276">https://puppet-debugger.com/play?url=https://gist.github.com/logicminds/64f0fe9f64339f18f097a9f42acd6276</a></p>
+          <p>or for single commands</p>
+          <p><a href="https://www.puppet-debugger.com/play?content=vars">https://www.puppet-debugger.com/play?content=vars</a></p>
+          <p>Please note the web based debugger only contains a minimal amount of puppet modules. So its likely that your code may not work if using third party modules.  This may change in the future though.</p>
+        </section>
+
+        <section id="Troubleshooting">
+          <h2><span class="fa fa-edit">Troubleshooting</span> </h2>
+          <p>Please file an issue so we can track bugs.</p>
+          <p>Pull requests welcomed.</p>
+        </section>
+
+        <section id="copyright">
+          <h2><span class="fa fa-edit">Copyright</span> </h2>
+          <p>Copyright (c) 2016 Corey Osman. See LICENSE.txt for further details.</p>
+        </section>
+      </div>
+    </div><!--end of .row-->
+  </div><!--end of .container-->
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 footer-social">
+        <a href="#"><span class="typcn typcn-social-facebook"></span></a>
+        <a href="#"><span class="typcn typcn-social-dribbble"></span></a>
+        <a href="#"><span class="typcn typcn-social-twitter"></span></a>
+        <a href="#"><span class="typcn typcn-social-google-plus"></span></a>
+        <a href="#"><span class="typcn typcn-social-instagram"></span></a>
+        <a href="#"><span class="typcn typcn-social-pinterest"></span></a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12 footer-copyright">
+        &copy; 2016 NW Ops
+      </div>
+    </div>
+  </div>
+</footer>
